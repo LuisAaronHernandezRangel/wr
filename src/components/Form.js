@@ -23,8 +23,14 @@ export const Form = () => {
       
       try {
        const {data} = await axios({
-        method: "GET",
-        baseURL: `https://pokeapi.co/api/v2/pokemon/${Name}`,
+        method: "Post",
+        baseURL: `http://localhost:8000`,
+        url:"/users",
+        data: {
+            Name,
+            Puesto,
+            Idpersonal
+          },
       
        })
        setName(data)

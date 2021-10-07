@@ -17,7 +17,8 @@ function Dashboard() {
           axios({
             method: 'GET',
             baseURL: "https://pokeapi.co/api/v2/pokemon?limit=2",
-            // url: '/advertisements/perroAd',
+            // baseURL: `http://localhost:8000`,
+            // url:"/users",
           })
             .then(({ data }) => {
               setLesson(data.results)
